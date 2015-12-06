@@ -1,2 +1,10 @@
+import Test.Tasty
+
+import Test.Day1
+
 main :: IO ()
-main = putStrLn "Test suite not yet implemented"
+main = defaultMain $ testGroup "Advent of Code" $
+  [
+    day1
+  ]
+

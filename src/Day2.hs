@@ -5,7 +5,7 @@ module Day2 where
 import Prelude hiding (length)
 
 import qualified Text.Parsec as P
-import Text.Parsec.Char (newline, char)
+import Text.Parsec.Char (char)
 
 data RRP = RRP
   {

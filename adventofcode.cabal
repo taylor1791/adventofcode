@@ -27,6 +27,7 @@ library
                      , Day10
                      , Day11
                      , Day12
+                     , Day13
   build-depends:       base >= 4.7 && < 5
                      , tasty
                      , tasty-hunit
@@ -68,6 +69,7 @@ test-suite adventofcode-test
                      , Test.Day10
                      , Test.Day11
                      , Test.Day12
+                     , Test.Day13
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   default-language:    Haskell2010
 

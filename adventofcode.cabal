@@ -28,6 +28,8 @@ library
                      , Day11
                      , Day12
   build-depends:       base >= 4.7 && < 5
+                     , tasty
+                     , tasty-hunit
                      , parsec
                      , containers
                      , mtl

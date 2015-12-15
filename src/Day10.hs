@@ -11,4 +11,4 @@ lookSay (x:xs) = c1 : c2 : lookSay xs
   where
     (c1:[]) = show $ length x
     c2 = head x
-  
+

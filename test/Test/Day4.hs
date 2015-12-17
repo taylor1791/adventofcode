@@ -5,8 +5,10 @@ import Day4 as D4
 import Test.Tasty
 import Test.Tasty.HUnit
 
+day4 :: TestTree
 day4 = testGroup "The Ideal Stocking Stuffer" [part1, part2]
 
+part1 :: TestTree
 part1 = testGroup "Part 1" [p1Tests, p1Puzzle]
 
 p1Tests :: TestTree
@@ -23,6 +25,7 @@ p1Puzzle = testGroup "Puzzle"
   , testCase "Puzzle" $ answer "ckczppom" 5 @?= "117946"
   ]
 
+part2 :: TestTree
 part2 = testGroup "Part 2" [p2Puzzle]
 
 p2Puzzle :: TestTree

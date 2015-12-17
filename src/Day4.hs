@@ -1,5 +1,5 @@
 module Day4 where
-  
+
 import Crypto.Hash.MD5 (hash)
 import qualified Data.ByteString.Char8 as B
 import qualified Data.ByteString.Lazy.Char8 as LB

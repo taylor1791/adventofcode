@@ -1,4 +1,3 @@
-{-# LANGUAGE OverloadedStrings #-}
 module Test.Day13 where
 
 import Day13

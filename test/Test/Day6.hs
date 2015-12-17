@@ -7,11 +7,14 @@ import Day6 as D6
 import Test.Tasty
 import Test.Tasty.HUnit
 
+day6 :: TestTree
 day6 = testGroup "Probably a Fire Hazard" [part1, part2]
 
+part1 :: TestTree
 part1 = testGroup "Part 1" [p1Tests, p1Puzzle]
 
-lights' = lights :: Array (Int, Int) Bool -> Int
+lights' :: Array (Int, Int) Bool -> Int
+lights' = lights
 
 p1Tests :: TestTree
 p1Tests = testGroup "Test Cases" $
@@ -25,10 +28,11 @@ p1Tests = testGroup "Test Cases" $
   ]
 
 p1Puzzle :: TestTree
-p1Puzzle = testCaseSteps "Puzzle" $ \step -> do
+p1Puzzle = testCaseSteps "Puzzle" $ \_ -> do
   instructions <- fmap (map parse . lines) $ readFile "input/day6.txt"
   569999 @?= lights' (lightLights instructions)
 
+part2 :: TestTree
 part2 = testGroup "Part 2" [p2Tests, p2Puzzle]
 
 lights'' :: Array (Int, Int) Int -> Int
@@ -42,7 +46,7 @@ p2Tests = testGroup "Test Cases" $
   ]
 
 p2Puzzle :: TestTree
-p2Puzzle = testCaseSteps "Puzzle" $ \step -> do
+p2Puzzle = testCaseSteps "Puzzle" $ \_ -> do
   instructions <- fmap (map parse . lines) $ readFile "input/day6.txt"
   17836115 @?= lights'' (lightLights instructions)
 

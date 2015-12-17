@@ -5,9 +5,12 @@ import Day11
 import Test.Tasty
 import Test.Tasty.HUnit
 
+day11 :: TestTree
 day11 = testGroup "Corporate Policy" [part1]
 
+part1 :: TestTree
 part1 = testGroup "Part 1" [p1Tests, p1Puzzle]
+
 p1Tests :: TestTree
 p1Tests = testGroup "Test Cases" $
   [
@@ -23,7 +26,7 @@ p1Tests = testGroup "Test Cases" $
   ]
 
 p1Puzzle :: TestTree
-p1Puzzle = testGroup "Puzzle" 
+p1Puzzle = testGroup "Puzzle"
   [
     testCase "Puzzle" $ nextPass "hepxcrrq" @?= "hepxxyzz"
   , testCase "Puzzle" $ nextPass (strSucc "hepxxyzz") @?= "heqaabcc"

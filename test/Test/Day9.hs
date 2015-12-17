@@ -5,8 +5,10 @@ import Day9 as D9
 import Test.Tasty
 import Test.Tasty.HUnit
 
+day9 :: TestTree
 day9 = testGroup "All in a Single Night" [part1, part2]
 
+part1 :: TestTree
 part1 = testGroup "Part 1" [p1Tests, p1Puzzle]
 
 sample :: [String]
@@ -31,14 +33,15 @@ p1Tests = testGroup "Test Cases" $
   ]
 
 p1Puzzle :: TestTree
-p1Puzzle = testCaseSteps "Puzzle" $ \step -> do
+p1Puzzle = testCaseSteps "Puzzle" $ \_ -> do
   route <- fmap (tsp . makeSymmetric . map parse . lines) $ readFile "input/Day9.txt"
   141 @?= snd route
 
+part2 :: TestTree
 part2 = testGroup "Part 2" [p2Puzzle]
 
 p2Puzzle :: TestTree
-p2Puzzle = testCaseSteps "Puzzle" $ \step -> do
+p2Puzzle = testCaseSteps "Puzzle" $ \_ -> do
   distances <- fmap (makeSymmetric . map parse . lines) $ readFile "input/Day9.txt"
   736 @?= snd (tsp' distances)
 

@@ -5,8 +5,10 @@ import Day10 as D10
 import Test.Tasty
 import Test.Tasty.HUnit
 
+day10  :: TestTree
 day10 = testGroup "Elves Look, Elves Say" [part1, part2]
 
+part1 :: TestTree
 part1 = testGroup "Part 1" [p1Tests, p1Puzzle]
 
 p1Tests :: TestTree
@@ -27,6 +29,7 @@ p1Puzzle = testGroup "Puzzle"
       @?= 329356
   ]
 
+part2 :: TestTree
 part2 = testGroup "Part 2" [p2Puzzle]
 
 p2Puzzle :: TestTree

@@ -5,8 +5,10 @@ import Day8 as D8
 import Test.Tasty
 import Test.Tasty.HUnit
 
+day8 :: TestTree
 day8 = testGroup "Matchsticks" [part1, part2]
 
+part1 :: TestTree
 part1 = testGroup "Part 1" [p1Tests, p1Puzzle]
 
 p1Tests :: TestTree
@@ -19,10 +21,11 @@ p1Tests = testGroup "Test Cases" $
   ]
 
 p1Puzzle :: TestTree
-p1Puzzle = testCaseSteps "Puzzle" $ \step -> do
-  lines <- fmap lines $ readFile "input/Day8.txt"
-  1333 @?= sum (map charDiff lines)
+p1Puzzle = testCaseSteps "Puzzle" $ \_ -> do
+  puzzle <- fmap lines $ readFile "input/Day8.txt"
+  1333 @?= sum (map charDiff puzzle)
 
+part2 :: TestTree
 part2 = testGroup "Part 2" [p2Tests, p2Puzzle]
 
 p2Tests :: TestTree
@@ -35,7 +38,7 @@ p2Tests = testGroup "Test Cases" $
   ]
 
 p2Puzzle :: TestTree
-p2Puzzle = testCaseSteps "Puzzle" $ \step -> do
-  lines <- fmap lines $ readFile "input/Day8.txt"
-  2046 @?= sum (map (charIncr 0) lines)
+p2Puzzle = testCaseSteps "Puzzle" $ \_ -> do
+  puzzle <- fmap lines $ readFile "input/Day8.txt"
+  2046 @?= sum (map (charIncr 0) puzzle)
 

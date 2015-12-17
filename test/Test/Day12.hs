@@ -10,8 +10,10 @@ import Data.Aeson
 import qualified Data.ByteString.Lazy.Char8 as B
 import qualified Data.Scientific as S
 
+day12 :: TestTree
 day12 = testGroup "JSAbacusFramework.io" [part1, part2]
 
+part1 :: TestTree
 part1 = testGroup "Part 1" [p1Tests, p1Puzzle]
 
 p1Tests :: TestTree
@@ -28,14 +30,15 @@ p1Tests = testGroup "Test Cases" $
   ]
 
 p1Puzzle :: TestTree
-p1Puzzle = testCaseSteps "Puzzle" $ \steps -> do
-  json <- fmap decode $ B.readFile "input/day12.txt"
-  (Just 111754 :: Maybe S.Scientific) @?= fmap sumNumbers json
+p1Puzzle = testCaseSteps "Puzzle" $ \_ -> do
+  puzzle <- fmap decode $ B.readFile "input/day12.txt"
+  (Just 111754 :: Maybe S.Scientific) @?= fmap sumNumbers puzzle
 
+part2 :: TestTree
 part2 = testGroup "Part 2" [p2Tests, p2Puzzle]
 
 p2Tests :: TestTree
-p2Tests = testGroup "Test Cases" 
+p2Tests = testGroup "Test Cases"
   [
     testCase "Example 1" $ fmap sumNonRedNumbers (decode "[1,2,3]") @?= Just 6
   , testCase "Example 2" $ fmap sumNonRedNumbers (decode "[1,{\"c\":\"red\",\"b\":2},3]") @?= Just 4
@@ -44,7 +47,7 @@ p2Tests = testGroup "Test Cases"
   ]
 
 p2Puzzle :: TestTree
-p2Puzzle = testCaseSteps "Puzzle" $ \steps -> do
-  json <- fmap decode $ B.readFile "input/day12.txt"
-  (Just 65402 :: Maybe S.Scientific) @?= fmap sumNonRedNumbers json
+p2Puzzle = testCaseSteps "Puzzle" $ \_ -> do
+  puzzle <- fmap decode $ B.readFile "input/day12.txt"
+  (Just 65402 :: Maybe S.Scientific) @?= fmap sumNonRedNumbers puzzle
 

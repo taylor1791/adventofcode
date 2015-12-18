@@ -16,6 +16,7 @@ import Test.Day13
 import Test.Day14
 import Test.Day15
 import Test.Day16
+import Test.Day17
 
 main :: IO ()
 main = defaultMain $ testGroup "Advent of Code" $
@@ -36,5 +37,6 @@ main = defaultMain $ testGroup "Advent of Code" $
   , day14
   , day15
   , day16
+  , day17
   ]
 

@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -F -pgmF test-pre #-}
 import Test.Tasty
 
 import Test.Day1
@@ -17,6 +18,7 @@ import Test.Day14
 import Test.Day15
 import Test.Day16
 import Test.Day17
+import Test.Day18
 
 main :: IO ()
 main = defaultMain $ testGroup "Advent of Code" $
@@ -37,6 +39,7 @@ main = defaultMain $ testGroup "Advent of Code" $
   , day14
   , day15
   , day16
-  , day17
+  -- , day17
+  , day18
   ]
 

@@ -32,6 +32,7 @@ library
                      , Day15
                      , Day16
                      , Day17
+                     , Day18
   build-depends:       base >= 4.7 && < 5
                      , tasty
                      , tasty-hunit

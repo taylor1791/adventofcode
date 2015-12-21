@@ -1,24 +1,25 @@
 {-# OPTIONS_GHC -F -pgmF test-pre #-}
-import Test.Tasty
+import           Test.Tasty
 
-import Test.Day1
-import Test.Day2
-import Test.Day3
-import Test.Day4
-import Test.Day5
-import Test.Day6
-import Test.Day7
-import Test.Day8
-import Test.Day9
-import Test.Day10
-import Test.Day11
-import Test.Day12
-import Test.Day13
-import Test.Day14
-import Test.Day15
-import Test.Day16
-import Test.Day17
-import Test.Day18
+import           Test.Day1
+import           Test.Day10
+import           Test.Day11
+import           Test.Day12
+import           Test.Day13
+import           Test.Day14
+import           Test.Day15
+import           Test.Day16
+import           Test.Day17
+import           Test.Day18
+import           Test.Day2
+import           Test.Day20
+import           Test.Day3
+import           Test.Day4
+import           Test.Day5
+import           Test.Day6
+import           Test.Day7
+import           Test.Day8
+import           Test.Day9
 
 main :: IO ()
 main = defaultMain $ testGroup "Advent of Code" $
@@ -41,5 +42,6 @@ main = defaultMain $ testGroup "Advent of Code" $
   , day16
   -- , day17
   , day18
+  , day20
   ]
 

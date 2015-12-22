@@ -1,12 +1,12 @@
 {-# LANGUAGE FlexibleContexts #-}
 module Test.Day18 where
 
-import Day18
+import           Day18
 
-import Test.Tasty
-import Test.Tasty.HUnit
+import           Test.Tasty
+import           Test.Tasty.HUnit
 
-import Data.Array.Unboxed
+import           Data.Array.Unboxed
 
 day18 :: TestTree
 day18 = testGroup "Like a GIF For Your Yard" [part1, part2]

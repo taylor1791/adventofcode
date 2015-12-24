@@ -37,6 +37,7 @@ library
                      , Day20
                      , Day21
                      , Day22
+                     , Day23
   build-depends:       base >= 4.7 && < 5
                      , tasty
                      , tasty-hunit
@@ -66,6 +67,7 @@ test-suite adventofcode-test
                      , aeson
                      , bytestring
                      , scientific
+                     , vector
   other-modules:       Test.Day1
                      , Test.Day2
                      , Test.Day3
@@ -88,6 +90,7 @@ test-suite adventofcode-test
                      , Test.Day20
                      , Test.Day21
                      , Test.Day22
+                     , Test.Day23
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   default-language:    Haskell2010
 

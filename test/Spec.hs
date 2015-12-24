@@ -16,6 +16,7 @@ import           Test.Day2
 import           Test.Day20
 import           Test.Day21
 import           Test.Day22
+import           Test.Day23
 import           Test.Day3
 import           Test.Day4
 import           Test.Day5
@@ -45,9 +46,10 @@ main = defaultMain $ testGroup "Advent of Code"
   -- , day16
   -- , day17
   -- , day18
-  , day19
+  -- , day19
   -- , day20
-  , day21
-  , day22
+  -- , day21
+  -- , day22
+  , day23
   ]
 

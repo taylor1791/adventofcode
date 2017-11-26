@@ -4,4 +4,6 @@ version = "0.1.0"
 authors = ["Taylor Everding <taylor1791@users.noreply.github.com>"]
 
 [dependencies]
+regex = "0.2.2"
+lazy_static = "0.2.11"
 nom = "3.2.1"

@@ -29,6 +29,16 @@ fn main() {
             file: String::from("day2.txt"),
             solve: day2::fun_solve,
         },
+        Day {
+            name: String::from("Day 3.1"),
+            file: String::from("day3.txt"),
+            solve: day3::solve_hor,
+        },
+        Day {
+            name: String::from("Day 3.2"),
+            file: String::from("day3.txt"),
+            solve: day3::solve_ver,
+        },
     ];
 
     for &Day {

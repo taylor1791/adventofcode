@@ -1,0 +1,7 @@
+[package]
+name = "aoc2016"
+version = "0.1.0"
+authors = ["Taylor Everding <taylor1791@users.noreply.github.com>"]
+
+[dependencies]
+nom = "3.2.1"

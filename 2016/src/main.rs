@@ -8,6 +8,7 @@ use aoc2016::*;
 
 struct Day {
     name: String,
+    file: String,
     solve: fn(&String) -> String,
 }
 
@@ -15,12 +16,28 @@ fn main() {
     let days = [
         Day {
             name: String::from("Day 1"),
+            file: String::from("day1.txt"),
             solve: day1::solve,
+        },
+        Day {
+            name: String::from("Day 2.1"),
+            file: String::from("day2.txt"),
+            solve: day2::simple_solve,
+        },
+        Day {
+            name: String::from("Day 2.2"),
+            file: String::from("day2.txt"),
+            solve: day2::fun_solve,
         },
     ];
 
-    for &Day { ref name, solve } in days.iter() {
-        let input_file = "./input/".to_string() + &name.replace("Day ", "day") + ".txt";
+    for &Day {
+        ref name,
+        ref file,
+        solve,
+    } in days.iter()
+    {
+        let input_file = "./input/".to_string() + file;
         let mut input = String::new();
         let mut file = File::open(input_file).expect("Failed to open file");
         file.read_to_string(&mut input).expect(

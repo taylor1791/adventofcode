@@ -1,0 +1,6 @@
+[package]
+name = "adventofcode-2017"
+version = "0.1.0"
+authors = ["Taylor Everding <taylor1791@users.noreply.github.com>"]
+
+[dependencies]
